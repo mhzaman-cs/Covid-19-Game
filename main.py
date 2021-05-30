@@ -77,7 +77,7 @@ class moving_obj:
 
     def shoot(self):
         if self.cool_down_counter == 0:
-            laser = Laser(self.x, self.y, self.laser_img)
+            laser = Laser(self.x-33, self.y, self.laser_img)
             self.lasers.append(laser)
             self.cool_down_counter = 1
 
@@ -118,7 +118,7 @@ class Player(moving_obj):
         pygame.draw.rect(window, (0,255,0), (self.x, self.y + self.obj_img.get_height() + 10, self.obj_img.get_width() * (self.health/self.max_health), 10))
 
 
-class Enemy(moving_obj):
+class Virus(moving_obj):
 
     COLOR_MAP = {
                 "red": (covid_uk),
@@ -156,7 +156,7 @@ def main():
     player_vel = 5
     laser_vel = 5
 
-    player = Player(300, 630)
+    player = Player(362, 430) #Starting point, found manually
 
     clock = pygame.time.Clock()
 
@@ -201,7 +201,7 @@ def main():
             level += 1
             wave_length += 5
             for i in range(wave_length):
-                virus = Enemy(random.randrange(50, WIDTH-100), random.randrange(-1500, -100), random.choice(["red", "blue", "green"]))
+                virus = Virus(random.randrange(50, WIDTH-100), random.randrange(-1500, -100), random.choice(["red", "blue", "green"]))
                 viruses.append(virus)
 
         for event in pygame.event.get():
