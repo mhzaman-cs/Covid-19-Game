@@ -166,7 +166,7 @@ def main():
     def redraw_window():
         WIN.blit(BG, (0,0))
         # draw text
-        level_label = main_font.render(f"Level: {level}", 1, (0,0,0))
+        level_label = main_font.render(f"Outbreak: {level}", 1, (0,0,0))
         lives_label = main_font.render(f"People Uninfected: {lives}/7", 1, (0,0,0))
 
         WIN.blit(lives_label, (10, 10))
