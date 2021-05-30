@@ -192,7 +192,7 @@ def main():
             lost_count += 1
 
         if lost:
-            if lost_count > 240: # This is to make sure the game restarts after 4 seconds
+            if lost_count > 180: # This is to make sure the game restarts after 4 seconds
                 run = False
             else:
                 continue
