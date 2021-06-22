@@ -11,7 +11,7 @@ pygame.display.set_caption("Vaccinator")
 # Load images
 covid_uk = pygame.image.load("assets/uk_var.png")
 covid_sa = pygame.image.load("assets/sa_var.png")
-covid_br = pygame.image.load("assets/uk_var.png")
+covid_br = pygame.image.load("assets/br_var.png")
 
 # Player player
 vaccine = pygame.image.load("assets/vaccine.png")
